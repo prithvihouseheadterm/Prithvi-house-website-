@@ -1,103 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prithvi House | Empros International School</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <audio autoplay>
-    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_9e1b98c8c0.mp3" type="audio/mp3">
-  </audio>
-  <div class="hamburger">&#9776;</div>
-  <nav>
-    <ul>
-      <li><a href="#" data-section="home">🏠 Home</a></li>
-      <li><a href="#" data-section="students">🎯 Students Leading</a></li>
-      <li><a href="#" data-section="events">🏅 Upcoming Events/Sports</a></li>
-      <li><a href="#" data-section="info">ℹ️ About Prithvi House</a></li>
-      <li><a href="#" data-section="feedback">💬 Feedbacks</a></li>
-      <li><a href="#" data-section="media">📸 Photos / Media</a></li>
-      <li><a href="#" data-section="mail">✉️ Leave Mail</a></li>
+  <nav class="navbar">
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">🏠 Home</a></li>
+      <li><a href="#students">🎯 Students Leading</a></li>
+      <li><a href="#events">🏆 Upcoming Events/Sports</a></li>
+      <li><a href="#about">ℹ️ About Prithvi House</a></li>
+      <li><a href="#feedback">💬 Feedbacks</a></li>
+      <li><a href="#media">📸 Photos / Media</a></li>
+      <li><a href="#mail">✉️ Leave Mail</a></li>
     </ul>
   </nav>
-  <main>
-    <section id="home" class="section active">
-      <div class="home-container">
-        <h1>Welcome to Prithvi House</h1>
-        <p class="tagline">"The Green Guardians of Empros International School"</p>
-        <p class="desc">Prithvi House represents growth, balance, and harmony with nature. We believe in teamwork,
-          discipline, and innovation — shining bright in academics, sports, and culture alike.</p>
-        <div class="home-card">
-          <h2>About This Website</h2>
-          <p>This is the official platform for Prithvi House members at Empros International School,
-            Talegaon Dabhade. Here you can explore our leading students, upcoming inter-house events,
-            house updates, and even send us your valuable feedback.</p>
-        </div>
-        <div class="home-card">
-          <h2>Join Our Community</h2>
-          <a href="https://chat.whatsapp.com/KDaPoZXibz4CE5ouyIKdVR?mode=wwc" target="_blank" class="join-btn">Join WhatsApp Community</a>
-        </div>
-        <div class="home-footer">
-          <p>“Together we grow, together we shine – We are Prithvi House.” 🌍</p>
-        </div>
-      </div>
-    </section>
-    <section id="students" class="section">
-      <h2>Top Performing Students</h2>
-      <canvas id="studentChart"></canvas>
-    </section>
-    <section id="events" class="section">
-      <h2>Upcoming Events & Sports</h2>
-      <ul class="event-list">
-        <li>🏏 Inter-House Cricket Match – 2nd November 2025</li>
-        <li>🏃‍♀️ Annual Sports Meet – 12th December 2025</li>
-        <li>⚽ Inter-House Football Finals – Date to be Announced</li>
-        <li>🏆 Tug of War Championship – Coming Soon!</li>
-      </ul>
-    </section>
-    <section id="info" class="section">
-      <h2>About Prithvi House</h2>
-      <div class="info-card">
-        <strong>Prefect:</strong> Princika<br>
-        <strong>Vice Prefect:</strong> Kartik<br>
-        <strong>House Teacher:</strong> Prajita Nair Ma’am
-      </div>
-      <p>🌍 Prithvi House symbolizes Earth, the mother of life and balance. It represents strength, patience, and steady growth. We believe in nurturing talents, respecting all beings, and striving for excellence while staying humble.</p>
-      <p>Our motto: <em>“Rooted in values, rising towards excellence.”</em></p>
-    </section>
-    <section id="feedback" class="section">
-      <h2>Feedbacks from Prithvi House Students</h2>
-      <ul class="feedback-list">
-        <li>Vedant – “I love being part of a team that believes in growth.”</li>
-        <li>Kunal – “Prithvi House gives me motivation and strength.”</li>
-        <li>Chinmay – “I enjoy every event and competition we have!”</li>
-      </ul>
-    </section>
-    <section id="media" class="section">
-      <h2>Photos & Media</h2>
-      <div class="home-card">
-        <p>🎥 Explore our moments, achievements, and videos on our official YouTube Channel.</p>
-        <a href="https://www.youtube.com/@EISPrithvihouse" target="_blank" class="join-btn">
-          Visit Our YouTube Channel
-        </a>
-      </div>
-      <div class="media-gallery">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/videoseries?list=UU" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
-    <section id="mail" class="section">
-      <h2>Send a Message to Prithvi House Team</h2>
-      <form onsubmit="sendMail(event)">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" rows="4" placeholder="Your Message..." required></textarea>
-        <button type="submit">Send Mail</button>
-      </form>
-    </section>
-  </main>
-  <script src="script.js"></script>
+
+  <section id="home" class="section">
+    <h1>Welcome to Prithvi House</h1>
+    <p class="quote">"The Green Guardians of Empros International School"</p>
+    <p>
+      Prithvi House represents growth, balance, and harmony with nature. 
+      We believe in teamwork, discipline, and innovation — shining bright 
+      in academics, sports, and culture alike.
+    </p>
+    <h2>About This Website</h2>
+    <p>
+      This is the official platform for Prithvi House members at 
+      Empros International School, Talegaon Dabhade. 
+      Explore our leading students, upcoming inter-house events, and more!
+    </p>
+
+    <div class="community">
+      <h3>Join Our Community</h3>
+      <a href="https://chat.whatsapp.com/KDaPoZXibz4CE5ouyIKdVR?mode=wwc" target="_blank" class="btn">Join on WhatsApp</a>
+    </div>
+
+    <audio autoplay>
+      <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_6a4b5a4b15.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+
+  <section id="students" class="section">
+    <h2>Students Leading</h2>
+    <canvas id="studentChart"></canvas>
+  </section>
+
+  <section id="events" class="section">
+    <h2>Upcoming Events / Sports</h2>
+    <p>🏅 Inter-house Sports Competitions - Dates will be updated here soon!</p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Prithvi House</h2>
+    <p><b>Vice Prefect:</b> Kartik</p>
+    <p><b>Prefect:</b> Princika</p>
+    <p><b>House Teacher:</b> Prajita Nair Ma’am</p>
+    <p>
+      Prithvi House symbolizes Earth — the foundation of life. It stands for stability, strength, and growth. 
+      Our members show responsibility, respect, and resilience, reflecting the grounded spirit of nature itself.
+    </p>
+  </section>
+
+  <section id="feedback" class="section">
+    <h2>Feedbacks</h2>
+    <ul class="feedback-list">
+      <li>Vedant – “Proud to be part of Prithvi House!”</li>
+      <li>Kunal – “We grow stronger together.”</li>
+      <li>Chinmay – “Great teamwork and leadership.”</li>
+      <li>Sejal – “Feels amazing to represent Prithvi!”</li>
+      <li>Aditi – “Love our green spirit.”</li>
+      <li>Tvisha – “Unity and excellence define us.”</li>
+      <li>Vishal – “Our team never gives up!”</li>
+      <li>Mit – “Inspired by our prefects and teachers.”</li>
+      <li>Gauri – “Learning every day with Prithvi House.”</li>
+      <li>Abhinav – “We shine in every event.”</li>
+      <li>Yuvraj – “Hard work brings success!”</li>
+      <li>Shlok – “Proud Green Guardian.”</li>
+      <li>Sarth – “Our house rocks!”</li>
+      <li>Arnav – “Prithvi House forever!”</li>
+      <li>Aditya – “Go Green, Go Prithvi!”</li>
+      <li>Swarali – “Always aiming higher.”</li>
+      <li>Jagrav – “Every challenge is an opportunity.”</li>
+      <li>Ishita – “We are the future.”</li>
+      <li>Vaidehi – “Together we can achieve anything.”</li>
+      <li>Kinjal – “Always united!”</li>
+      <li>Aarohi – “Proud and passionate!”</li>
+      <li>Ansh – “Great journey with my team!”</li>
+    </ul>
+  </section>
+
+  <section id="media" class="section">
+    <h2>Photos / Media</h2>
+    <p>Watch our official videos and events here:</p>
+    <a href="https://www.youtube.com/@EISPrithvihouse" target="_blank" class="btn">🎥 Visit YouTube Channel</a>
+  </section>
+
+  <section id="mail" class="section">
+    <h2>Leave a Mail</h2>
+    <form action="mailto:prithvihouseheadteamreport@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
 </body>
 </html>
